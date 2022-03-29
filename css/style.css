@@ -46,6 +46,7 @@
     background: linear-gradient(top, #fff1d3, #ffdb90);         
 }
 
+<!--
 /* .tooltip::after {
     content: '';
     position: absolute;
@@ -56,18 +57,21 @@
     border-left: 10px solid transparent;
     border-right : 10px solid transparent;
 } */
+-->
 
 .tooltip-down .tooltip {
     bottom: 25px;
     top: auto;
 }
 
+<!--
 /* .tooltip-down .tooltip::after {
     bottom: -10px;
     top: auto;
     border-bottom: 0;
     border-top: 10px solid #ffdb90;
 } */
+-->
 
 .tooltip h4 {
     font: bold 1em 'Trebuchet MS', Tahoma, Arial;

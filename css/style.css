@@ -14,6 +14,7 @@
 }
 
 /* Begin styling the tooltips and pins */
+
 .tooltip-up, .tooltip-down {
     position: absolute;
     background: url(../img/13rZbuk.png);

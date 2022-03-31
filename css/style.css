@@ -1,81 +1,72 @@
-* 
-{ background-color: #fff1d3; }
-{ font-family: 'Titillium Web', sans-serif; }
-
-/* Relative positioning*/
-#image-map {
+*
+#header {
+    left: 15px;
+    width: 400px;
     position: absolute;
-    margin: 0px auto 0px auto;
 }
 
-/* Hide the original tooltips contents */
+#longDiv {
+    margin: 100px 0 0 0;
+    width: 1000px;
+    height: 2000px;
+    border: 0px;
+}
+
+#image-map {
+    position: static;
+    z-index: 5;
+}
+
+#image-map2 {
+    position: static;
+}
+
 .pin {
     display: none;
 }
 
-/* Begin styling the tooltips and pins */
-
 .tooltip-up, .tooltip-down {
     position: absolute;
-    background: url(../img/13rZbuk.png);
-    background-position: 0 -37px;
-    width: 25px;
-    height: 37px;
-    margin-left: -12px;
-    margin-top: -37px;
+    background: url("https://i.imgur.com/O8TJqgY.png");
+    background-position: 0 0px;
+    width: 32px;
+    height: 32px;
+    margin-left: -15px;
+    margin-top: -15px;
 }
 
 .tooltip-down {
-    background-position: 0 -37px;
+    background-position: 0 0px;
 }
 
 .tooltip {
     display: none;
-    width: 100px;
+    width: auto;
     cursor: help;
     text-shadow: 0 1px 0 #fff;
-    position: absolute;
-    top: 50px;
-    left: 100%;
-    z-index: 999;
-    margin-left: -70px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    margin-top: auto;
+    margin-left: auto;
     padding: 10px;
     color: #222;
     border-radius: 5px;
-    box-shadow: 0 3px 0 rgba(0,0,0,.7);
-    background: #fff1d3;
-    background: linear-gradient(top, #fff1d3, #ffdb90);         
+    box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+    background: #f9e3c3;
 }
-
-<!--
-/* .tooltip::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    margin-left: -10px;
-    border-bottom: 10px solid #fff1d3;
-    border-left: 10px solid transparent;
-    border-right : 10px solid transparent;
-} */
--->
 
 .tooltip-down .tooltip {
-    bottom: 25px;
-    top: auto;
+    top: 2.5%;
+    left: 2.5%;
 }
 
-<!--
-/* .tooltip-down .tooltip::after {
-    bottom: -10px;
-    top: auto;
-    border-bottom: 0;
-    border-top: 10px solid #ffdb90;
-} */
--->
-
 .tooltip h4 {
-    font: bold 1em 'Trebuchet MS', Tahoma, Arial;
+    align-content: center;
+    color: #ffffff;
+    text-shadow: #000000 0px 0px 0.2em;
+    font: 1.5em 'Planer';
     margin: 0 0 10px;
 }
 
@@ -83,4 +74,24 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.text-h {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: #000000 0px 0px 0.2em;
+    font: 2.5em 'Planer';
+}
+
+img.poke {
+    width: 256px;
+    height: 256px;
+}
+
+hr.rounded {
+    height: 20px;
+    width: inherit;
+    border: 0;
+    box-shadow: inset 0 9px 20px -3px rgba(84, 76, 63, 1);
+    border-radius: 15px;
 }

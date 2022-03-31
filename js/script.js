@@ -18,7 +18,7 @@ $(document).ready(function(){
             }
     
         // append the tooltip
-        $("#image-map").append("<div style='left:"+$(".pin").eq(i).data('xpos')+"px;top:"+$(".pin").eq(i).data('ypos')+"px' class='" + tooltipDirection +"'>\
+        $("#image-map").append("<div style='left:"+$(".pin").eq(i).data('xpos')+"px;top:"+$(".pin").eq(i).data('ypos')+"px' class='"+ tooltipDirection +"'>\
                                             <div class='tooltip'>" + $(".pin").eq(i).html() + "</div>\
                                     </div>");
     }    
@@ -29,4 +29,10 @@ $(document).ready(function(){
             }).mouseleave(function(){
                 $(this).children('.tooltip').fadeOut(100);
             })
+});
+
+$(window).scroll(function(){
+    $('#header').css({
+        'left': $(this).scrollLeft() + 15
+    });
 });

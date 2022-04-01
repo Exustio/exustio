@@ -1,24 +1,15 @@
 *
-#header {
-    left: 15px;
-    width: 400px;
+@font-face {
+    src:url(/fonts/Planer_Bold.ttf);
+    font-family:'Planer';
+}
+
+#heading {
     position: absolute;
 }
 
-#longDiv {
-    margin: 100px 0 0 0;
-    width: 1000px;
-    height: 2000px;
-    border: 0px;
-}
-
 #image-map {
-    position: static;
-    z-index: 5;
-}
-
-#image-map2 {
-    position: static;
+    position: absolute;
 }
 
 .pin {
@@ -27,6 +18,7 @@
 
 .tooltip-up, .tooltip-down {
     position: absolute;
+    z-index: 10;
     background: url("https://i.imgur.com/O8TJqgY.png");
     background-position: 0 0px;
     width: 32px;
@@ -41,15 +33,14 @@
 
 .tooltip {
     display: none;
-    width: auto;
     cursor: help;
     text-shadow: 0 1px 0 #fff;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    margin-top: auto;
-    margin-left: auto;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 15;
+    margin-top: 80%;
+    margin-left: 80%;
     padding: 10px;
     color: #222;
     border-radius: 5px;
@@ -70,12 +61,6 @@
     margin: 0 0 10px;
 }
 
-.tooltip ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
 .text-h {
     text-align: center;
     color: #ffffff;
@@ -89,8 +74,9 @@ img.poke {
 }
 
 hr.rounded {
+    margin-top: auto;
+    margin-bottom: auto;
     height: 20px;
-    width: inherit;
     border: 0;
     box-shadow: inset 0 9px 20px -3px rgba(84, 76, 63, 1);
     border-radius: 15px;

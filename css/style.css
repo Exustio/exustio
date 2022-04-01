@@ -1,7 +1,7 @@
 *
 @font-face {
-    src:url(/fonts/Planer_Bold.ttf);
     font-family:'Planer';
+    src: url('/fonts/Planer_Bold.ttf') format('truetype');
 }
 
 #heading {

@@ -1,5 +1,9 @@
 *
-#image-map { position: absolute; }
+#image-map {
+    position: absolute;
+    background: url("https://i.imgur.com/LPQ47nC.png");
+    background-position: 0 0px;
+}
 
 #heading {
     position: absolute;

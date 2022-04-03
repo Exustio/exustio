@@ -1,13 +1,9 @@
 *
-#image-map {
-    position: absolute;
-    background: url("https://i.imgur.com/LPQ47nC.png");
-    background-position: 0 0px;
-}
+#image-map { position: absolute; }
 
 #heading {
     position: absolute;
-    z-index: 10;
+    z-index: 5;
     text-align: center;
     font-family: Kakugo;
     font-size: 2.5em;
@@ -58,6 +54,22 @@
     color: #ffffff;
     text-shadow: #000000 0px 0px 0.2em;
     margin: 0 0 10px;
+}
+
+img.map-img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+img.grid {
+    position: absolute;
+    background: url("http://i.imgur.com/LPQ47nC.png");
+    background-position: 0 0px;
+    width: 2048px;
+    height: 2048px;
+    top: 0;
+    left: 0;
 }
 
 img.poke {

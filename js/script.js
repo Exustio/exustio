@@ -1,34 +1,37 @@
-$(window).scroll(function() {
-    $('#heading').css( {
-        'left': $(this).scrollLeft()
+$(document).ready(function() {
+    $(".typeInfo").hide();
+    $(".showType").change(function() {
+        var checkId = $(this).attr("id");
+        $('.typeInfo').each(function(index, value) {
+            var typeId = $(this).data("id");
+            if (checkId == typeId) {
+                $(this).toggle();
+            }
+        });
     });
 });
 
-$(document).ready(function() {
-    $('#image-map').css({
-        'width':$('#image-map img').width(),
-        'height':$('#image-map img').height()
-    })
-
-    var tooltipDirection;
-
-    for (i=0; i<$(".pin").length; i++) {
-        if ($(".pin").eq(i).hasClass('pin-down')) {
-            tooltipDirection = 'tooltip-down';
+$(function() {
+    var masterCheck = $("#masterCheck");
+    var subChecks = $("#notMaster :checkbox");
+    masterCheck.click(function() {
+        var isMasterChecked = $(this).is(":checked");
+        subChecks.prop("checked", isMasterChecked);
+    });
+    subChecks.change(function() {
+        var totalItems = subChecks.length;
+        var checkedItems = subChecks.filter(":checked").length;
+        if (checkedItems > 0 && checkedItems < totalItems) {
+            masterCheck.prop("indeterminate", true);
+            masterCheck.prop("checked", true);
+        }
+        else if (totalItems == checkedItems) {
+            masterCheck.prop("indeterminate", false);
+            masterCheck.prop("checked", true);
         }
         else {
-            tooltipDirection = 'tooltip-up';
+            masterCheck.prop("indeterminate", false);
+            masterCheck.prop("checked", false);
         }
-        $("#image-map").append("<div style='left:" + 
-                               $(".pin").eq(i).data('xpos')*2 + "px; top:" + 
-                               $(".pin").eq(i).data('ypos')*2 + "px' class='" + 
-                               tooltipDirection + "'> \ <div class='tooltip'>" + 
-                               $(".pin").eq(i).html() + "</div> \ </div>");
-    }
-
-    $('.tooltip-up, .tooltip-down').mouseenter(function() {
-        $(this).children('.tooltip').fadeIn(100);
-    }).mouseleave(function() {
-        $(this).children('.tooltip').fadeOut(100);
-    })
+    });
 });

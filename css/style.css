@@ -1,4 +1,14 @@
 *
+.map {
+    z-index: 5;
+    border: 0;
+}
+
+.grid {
+    z-index: 10;
+    border: 0;
+}
+
 .head-style, .head-style2, .head-style3 {
     z-index: 15;
     text-align: center;
@@ -26,39 +36,6 @@
     background-color: #63795a;
 }
 
-.grandparent {
-    width: 2048px;
-    height: 2048px;
-    position:relative;
-}
-
-.parent {
-    width: 2048px;
-    height: 2048px;
-    position:absolute;
-    top: 0px;
-    left: 0px;
-}
- 
-.child {
-    z-index: 20;
-    margin-top: -8px;
-    margin-left: -8px;
-    width: 32px;
-    height: 32px;
-    position:absolute;
-}
-
-map {
-    z-index: 5;
-    border: 0;
-}
-
-grid {
-    z-index: 10;
-    border: 0;
-}
-
 hr.rounded, hr.rounded2, hr.rounded3 {
     z-index: 15;
     height: 25px;
@@ -77,6 +54,28 @@ hr.rounded3 {
     margin-top: -40;
 
 }
+
+.grandparent {
+    width: 2048px;
+    height: 2048px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.parent {
+    margin-top: -8px;
+    margin-left: -8px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+}
+
+.child {
+    position: relative;
+    z-index: 20;
+}
+
 .dropdown {
     display: inline-block;
 }
@@ -133,13 +132,15 @@ label {
     position: relative;
 }
 
+.tooltip-content {
+    position: absolute;
+}
+
 .tooltip-wrap .tooltip-content {
     display: none;
-    position: absolute;
     cursor: cell;
     top: -2.5px;
     left: -2.5px;
-    z-index: 15;
     margin-top: 15px;
     margin-left: 15px;
     padding: 10px;
@@ -155,7 +156,6 @@ label {
     align-content: center;
     width: 100px;
     height: 100px;
-    z-index: 25;
     text-align: center;
     font-family: Kakugo;
     color: #faf4da;

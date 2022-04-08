@@ -3,7 +3,7 @@
 
     <title>Cobalt Coastlands Coordinates</title>
 
-    <link rel="icon" href="favicon.png" sizes="any">
+    <link rel="icon" href="arceus.png" sizes="any">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -32,51 +32,109 @@
     <div class="head-style2 dropdown">
         <button class="head-style3">Spawn&nbsp;Type</button>
         <div class="dropdown-content">
-            <input type="checkbox" id="toggle" onclick="showNo()">
-            <label for="toggle">Normal</label>
-            <input type="checkbox" id="toggle2" onclick="showAl()">
-            <label for="toggle2">Alpha</label>
-            <input type="checkbox" id="toggle3" onclick="showEv()">
-            <label for="toggle3">Event</label>
-            <input type="checkbox" id="toggle4" onclick="showWo()">
-            <label for="toggle4">Wormholes</label>
-            <input type="checkbox" id="toggle5" onclick="showOu()">
-            <label for="toggle5">Outbreak</label>
-            <input type="checkbox" id="toggle6" onclick="showMa()">
-            <label for="toggle6">Massive</label>
-            
+
+<!--
+            <div>
+                <input type="checkbox" id="masterCheck">
+                <label for="masterCheck">All/None</label>
+            </div>
+-->
+
+            <div id="notMaster">
+            <input type="checkbox" id="normal" class="showType">
+            <label for="normal">Normal</label>
+            <input type="checkbox" id="alpha" class="showType">
+            <label for="alpha">Alpha</label>
+            <input type="checkbox" id="event" class="showType">
+            <label for="event">Event</label>
+            <input type="checkbox" id="wormhole" class="showType">
+            <label for="wormhole">Wormholes</label>
+            <input type="checkbox" id="outbreak" class="showType">
+            <label for="outbreak">Outbreak</label>
+            <input type="checkbox" id="massive" class="showType">
+            <label for="massive">Massive</label>
+            </div>
         </div>
     </div>
     
 </section>
-  
+
+<!-- Map & Grid -->
+
 <section>
 
     <div class="grandparent">
-       <img class="map" src="/img/UrEGJpp.png" alt="Cobalt Coastlands">
-        <div class="parent">
-            <img class="grid" src="/img/XHJ7MW4.png" alt="Grid">
-        </div>
+        <img id="currentPhoto" class="map" src="/img/UrEGJpp.png" onerror="this.onerror=null; this.src='https://i.imgur.com/UrEGJpp.png'" alt="Obsidian Fieldlands">
+    </div>
+    <div class="grandparent">
+        <img id="currentPhoto" class="grid" src="/img/XHJ7MW4.png" onerror="this.onerror=null; this.src='https://i.imgur.com/XHJ7MW4.png'" alt="Grid">
 
 <!-- Cartesian Coordinates -->
 
-        <div class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
+        <div data-id="normal" class="typeInfo parent"
+             style="left: calc(100px * 2); top: calc(100px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
 
-        <!-- <div>
-            <img class="poke" src="../img/3xA9f98.png" title="Shaymin">
-        </div> -->
+        <div data-id="alpha" class="typeInfo parent"
+             style="left: calc(125px * 2); top: calc(100px * 2);">
+            <div class="tooltip-wrap">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div data-id="event" class="typeInfo parent"
+             style="left: calc(150px * 2); top: calc(100px * 2);">
+            <div class="tooltip-wrap">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="wormhole" class="typeInfo parent"
+             style="left: calc(100px * 2); top: calc(125px * 2);">
+            <div class="tooltip-wrap">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="outbreak" class="typeInfo parent"
+             style="left: calc(125px * 2); top: calc(125px * 2);">
+            <div class="tooltip-wrap">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="massive" class="typeInfo parent"
+             style="left: calc(150px * 2); top: calc(125px * 2);">
+            <div class="tooltip-wrap">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
 
 <!-- End Coords -->
 
-</div>
-
+    </div>
+    
 <!-- End Map -->
 
 </section>

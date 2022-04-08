@@ -3,7 +3,7 @@
 
     <title>Obsidian Fieldlands Coordinates</title>
 
-    <link rel="icon" href="favicon.png" sizes="any">
+    <link rel="icon" href="arceus.png" sizes="any">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -32,10 +32,14 @@
     <div class="head-style2 dropdown">
         <button class="head-style3">Spawn&nbsp;Type</button>
         <div class="dropdown-content">
+
+<!--
             <div>
                 <input type="checkbox" id="masterCheck">
                 <label for="masterCheck">All/None</label>
             </div>
+-->
+
             <div id="notMaster">
             <input type="checkbox" id="normal" class="showType">
             <label for="normal">Normal</label>
@@ -54,204 +58,83 @@
     </div>
     
 </section>
-  
+
+<!-- Map & Grid -->
+
 <section>
 
     <div class="grandparent">
-       <img class="map" src="/img/iK0gec3.png" alt="Obsidian Fieldlands">
-
-        <div class="parent">
-            <img class="grid" src="/img/XHJ7MW4.png" alt="Grid">
-        </div>
+        <img id="currentPhoto" class="map" src="/img/iK0gec3.png" onerror="this.onerror=null; this.src='https://i.imgur.com/iK0gec3.png'" alt="Obsidian Fieldlands">
+    </div>
+    <div class="grandparent">
+        <img id="currentPhoto" class="grid" src="/img/XHJ7MW4.png" onerror="this.onerror=null; this.src='https://i.imgur.com/XHJ7MW4.png'" alt="Grid">
 
 <!-- Cartesian Coordinates -->
 
-        <div data-id="normal" class="typeInfo child tooltip-content"
+        <div data-id="normal" class="typeInfo parent"
              style="left: calc(100px * 2); top: calc(100px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
 
-        <div data-id="normal" class="typeInfo child tooltip-content"
+        <div data-id="alpha" class="typeInfo parent"
              style="left: calc(125px * 2); top: calc(100px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
  
-        <div data-id="alpha" class="typeInfo child tooltip-content"
+        <div data-id="event" class="typeInfo parent"
              style="left: calc(150px * 2); top: calc(100px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
 
-        <div data-id="alpha" class="typeInfo child tooltip-content"
+        <div data-id="wormhole" class="typeInfo parent"
              style="left: calc(100px * 2); top: calc(125px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
 
-        <div data-id="outbreak" class="typeInfo child tooltip-content"
+        <div data-id="outbreak" class="typeInfo parent"
              style="left: calc(125px * 2); top: calc(125px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
 
-        <div data-id="massive" class="typeInfo child tooltip-content"
+        <div data-id="massive" class="typeInfo parent"
              style="left: calc(150px * 2); top: calc(125px * 2);">
             <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
+                <img id="currentPhoto" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
                     <p>0100.00&#176;<br>0150.00&#176;</p>
                 </div>
             </div>
         </div>
-
-<!--        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="divNo" class="child tooltip-content" style="left: calc(100px * 2); top: calc(150px * 2);">
-            <div class="tooltip-wrap">
-            <img src="/img/O8TJqgY.png">
-                <div class="tooltip-content">
-                    <p>0100.00&#176;<br>0150.00&#176;</p>
-                </div>
-            </div>
-        </div>
--->
-
-        <!-- <div>
-            <img class="poke" src="../img/3xA9f98.png" title="Shaymin">
-        </div> -->
 
 <!-- End Coords -->
 
-</div>
-
+    </div>
+    
 <!-- End Map -->
 
 </section>

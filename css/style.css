@@ -9,7 +9,7 @@
     border: 0;
 }
 
-.head-style, .head-style2, .head-style3 {
+.head-style, .head-style2, .head-style3, .head-style4 {
     z-index: 15;
     text-align: center;
     font-family: Kakugo;
@@ -17,7 +17,7 @@
     text-shadow: #000000 0.05em 0.05em 0.2em;
 }
 
-.head-style, .head-style2 {
+.head-style, .head-style2, .head-style3 {
     position: fixed;
 }
 
@@ -31,9 +31,13 @@
 }
 
 .head-style3 {
+    margin-top: 50px;
+    margin-left: 650px;
+}
+
+.head-style4 {
     width: 100px;
     align-content: center;
-    background-color: #63795a;
 }
 
 hr.rounded, hr.rounded2, hr.rounded3 {
@@ -64,10 +68,8 @@ hr.rounded3 {
 }
 
 .parent {
-    margin-top: -8px;
-    margin-left: -8px;
-    width: 32px;
-    height: 32px;
+    margin-top: -64px;
+    margin-left: -64px;
     position: absolute;
 }
 
@@ -139,10 +141,10 @@ label {
 .tooltip-wrap .tooltip-content {
     display: none;
     cursor: cell;
-    top: -2.5px;
-    left: -2.5px;
-    margin-top: 15px;
-    margin-left: 15px;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0,0,0,.7);
@@ -154,10 +156,27 @@ label {
 .tooltip-wrap:hover .tooltip-content {
     display: block;
     align-content: center;
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
     text-align: center;
     font-family: Kakugo;
     color: #faf4da;
     text-shadow: #000000 0.05em 0.05em 0.2em;
+}
+
+.pokemon {
+    
+}
+
+.unown {
+    width: 128px;
+    height: 128px;
+}
+
+.wisps {
+    
+}
+
+.poems {
+    
 }

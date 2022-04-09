@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        @font-face { font-family: Kakugo; src: url('fonts/FOT-UDKakugoC80Pro-DB.OTF'); }
-        @font-face { font-family: Rodin; src: url('fonts/FOT-RodinNTLGPro-DB.OTF'); }
+        @font-face { font-family: Kakugo;
+            src: url('fonts/FOT-UDKakugoC80Pro-DB.OTF'); }
+        @font-face { font-family: Rodin;
+            src: url('fonts/FOT-RodinNTLGPro-DB.OTF'); }
         .Kakugo { font-family: Kakugo; }
         .Rodin { font-family: Rodin; }
     </style>
@@ -30,7 +32,8 @@
     </div>
 
     <div class="head-style2 dropdown">
-        <button class="head-style3">Spawn&nbsp;Type</button>
+        <button class="head-style4" style="background-color: #63795a;">
+            Spawn&nbsp;Type</button>
         <div class="dropdown-content">
 
 <!--
@@ -56,7 +59,23 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="head-style3 dropdown">
+        <button class="head-style4" style="background-color: #d3b37e;">
+            Collectables</button>
+        <div class="dropdown-content">
+
+            <div id="notMaster">
+            <input type="checkbox" id="unown" class="showType">
+            <label for="unown">Unown</label>
+            <input type="checkbox" id="wisps" class="showType">
+            <label for="wisps">Wisps</label>
+            <input type="checkbox" id="poems" class="showType">
+            <label for="poems">Poems</label>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <!-- Map & Grid -->
@@ -64,13 +83,18 @@
 <section>
 
     <div class="grandparent">
-        <img id="currentPhoto" class="map" src="/img/oZcDcYS.png" onerror="this.onerror=null; this.src='https://i.imgur.com/oZcDcYS.png'" alt="Obsidian Fieldlands">
+        <img class="map" src="/img/oZcDcYS.png"
+             onerror="this.onerror=null; this.src='https://i.imgur.com/oZcDcYS.png'"
+             alt="Obsidian Fieldlands">
     </div>
     <div class="grandparent">
-        <img id="currentPhoto" class="grid" src="/img/XHJ7MW4.png" onerror="this.onerror=null; this.src='https://i.imgur.com/XHJ7MW4.png'" alt="Grid">
+        <img class="grid" src="/img/XHJ7MW4.png"
+             onerror="this.onerror=null; this.src='https://i.imgur.com/XHJ7MW4.png'"
+             alt="Grid">
 
 <!-- Cartesian Coordinates -->
 
+<!--
         <div data-id="normal" class="typeInfo parent"
              style="left: calc(100px * 2); top: calc(100px * 2);">
             <div class="tooltip-wrap">
@@ -130,14 +154,118 @@
                 </div>
             </div>
         </div>
+-->
 
 <!-- End Coords -->
 
+<!-- Unown -->
+
+<!--
+        <div data-id="unown" class="typeInfo parent"
+             style="left: calc(971.193px * 2); top: calc(149.132px * 2);">
+            <div class="tooltip-wrap">
+                <img class="unown" src="/img/CkUHowz.png"
+                     onerror="this.onerror=null; this.src='https://i.imgur.com/CkUHowz.png'">
+                <div class="tooltip-content child">
+                    <p>Unown&nbsp;(E&nbsp;&bull;Forme)
+                        <br>in&nbsp;Grueling<br>Grove</p><hr>
+                    <p>971.193&#176;<br>149.132&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="unown" class="typeInfo parent"
+             style="left: calc(961.483px * 2); top: calc(515.023px * 2);">
+            <div class="tooltip-wrap">
+                <img class="unown" src="/img/COkjeej.png"
+                     onerror="this.onerror=null; this.src='https://i.imgur.com/COkjeej.png'">
+                <div class="tooltip-content child">
+                    <p>Unown&nbsp;(G&nbsp;&bull;Forme)
+                        <br>at&nbsp;the<br>Obsidian&nbsp;Falls</p><hr>
+                    <p>961.483&#176;<br>515.023&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="unown" class="typeInfo parent"
+             style="left: calc(147.279px * 2); top: calc(448.737px * 2);">
+            <div class="tooltip-wrap">
+                <img class="unown" src="/img/CZK4QKD.png"
+                     onerror="this.onerror=null; this.src='https://i.imgur.com/CZK4QKD.png'">
+                <div class="tooltip-content child">
+                    <p>Unown&nbsp;(I&nbsp;&bull;Forme)
+                        <br>at&nbsp;Lake&nbsp;Verity</p><hr>
+                    <p>971.193&#176;<br>149.132&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="unown" class="typeInfo parent"
+             style="left: calc(653.777px * 2); top: calc(797.367px * 2);">
+            <div class="tooltip-wrap">
+                <img class="unown" src="/img/7RXbckV.png"
+                     onerror="this.onerror=null; this.src='https://i.imgur.com/7RXbckV.png'">
+                <div class="tooltip-content child">
+                    <p>Unown&nbsp;(S&nbsp;&bull;Forme)
+                        <br>at&nbsp;Tidewater<br>Dam</p><hr>
+                    <p>971.193&#176;<br>149.132&#176;</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="unown" class="typeInfo parent"
+             style="left: calc(910.389px * 2); top: calc(912.716px * 2);">
+            <div class="tooltip-wrap">
+                <img class="unown" src="/img/Qdo0Eg7.png"
+                     onerror="this.onerror=null; this.src='https://i.imgur.com/Qdo0Eg7.png'">
+                <div class="tooltip-content child">
+                    <p>Unown&nbsp;(X&nbsp;&bull;Forme)
+                        <br>at&nbsp;Grandtree<br>Arena</p><hr>
+                    <p>971.193&#176;<br>149.132&#176;</p>
+                </div>
+            </div>
+        </div>
+-->
+
+<!-- End Unown -->
+
+<!-- Wisps -->
+
+<!--
+        <div data-id="wisps" class="typeInfo parent"
+             style="left: calc(100px * 2); top: calc(100px * 2);">
+            <div class="tooltip-wrap">
+                <img class="wisps" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+-->
+
+<!-- End Wisps -->
+
+<!-- Poems -->
+
+<!--
+        <div data-id="poems" class="typeInfo parent"
+             style="left: calc(100px * 2); top: calc(100px * 2);">
+            <div class="tooltip-wrap">
+                <img class="poems" src="/img/O8TJqgY.png" onerror="this.onerror=null; this.src='https://i.imgur.com/O8TJqgY.png'">
+                <div class="tooltip-content child">
+                    <p>0100.00&#176;<br>0150.00&#176;</p>
+                </div>
+            </div>
+        </div>
+-->
+
+<!-- End Poems -->
+
     </div>
-    
-<!-- End Map -->
 
 </section>
+
+<!-- End Map -->
 
 </body>
 </html>

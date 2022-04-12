@@ -11,27 +11,28 @@ $(document).ready(function() {
     });
 });
 
-$(function() {
-    var masterCheck = $("#masterCheck");
-    var subChecks = $("#notMaster :checkbox");
-    masterCheck.click(function() {
-        var isMasterChecked = $(this).is(":checked");
-        subChecks.prop("checked", isMasterChecked);
+$(document).ready(function() {
+    var cH = $('#crosshair-h'),
+        cV = $('#crosshair-v');
+    $(this).on('mousemove touchmove', function(e) {
+        var x = e.pageX - 1;
+        var y = e.pageY - 1;
+        var x_round = Math.round(x / 2.5) * 1.25;
+        var y_round = Math.round(y / 2.5) * 1.25;
+        var x_fixed = x_round.toFixed(2);
+        var y_fixed = y_round.toFixed(2);
+        cH.css('top', e.pageY);
+        cV.css('left', e.pageX);
+        $('#mousepos').css( {
+            top: e.pageY + 'px',
+            left: e.pageX + 'px'
+        }, 800);
+        $('#mousepos').text(
+            "X:\xa0" + x_fixed + "\u00B0\xa0" +
+            "Y:\xa0" + y_fixed + "\u00B0");
+        e.stopPropagation();
     });
-    subChecks.change(function() {
-        var totalItems = subChecks.length;
-        var checkedItems = subChecks.filter(":checked").length;
-        if (checkedItems > 0 && checkedItems < totalItems) {
-            masterCheck.prop("indeterminate", true);
-            masterCheck.prop("checked", true);
-        }
-        else if (totalItems == checkedItems) {
-            masterCheck.prop("indeterminate", false);
-            masterCheck.prop("checked", true);
-        }
-        else {
-            masterCheck.prop("indeterminate", false);
-            masterCheck.prop("checked", false);
-        }
+    $(document).hover(function(){
     });
+    e.stopPropagation();
 });
